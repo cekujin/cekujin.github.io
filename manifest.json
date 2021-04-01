@@ -20,7 +20,7 @@
     "background_color": "#03041a",
     "display": "fullscreen",
     "orientation": "portrait",
-    "shortcut": [
+    "shortcuts": [
         {
             "name": "About",
             "short_name": "About",
