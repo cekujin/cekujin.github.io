@@ -19,5 +19,18 @@
     "theme_color": "#03041a",
     "background_color": "#03041a",
     "display": "fullscreen",
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "shortcut": [
+        {
+            "name": "About",
+            "short_name": "About",
+            "url": "/about",
+            "icons": [{
+                "src": "icons/manifest-icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png",
+                "purpose": "maskable any"
+            }]
+        }
+    ]
 }
