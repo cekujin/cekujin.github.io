@@ -1,7 +1,8 @@
-const cacheName = "v1";
+const cacheName = "v2";
 
 const cacheAssets = [
     'index.html',
+    'notification.html',
     'about.html',
     'base.css',
     'main.js'
