@@ -46,3 +46,8 @@ self.addEventListener('fetch', (e) => {
         fetch(e.request).catch(() => caches.match(e.request))
     )
 });
+
+self.addEventListener('notificationclose', (e) => {
+    let notification = e.notification;
+    let p
+})

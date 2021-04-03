@@ -11,3 +11,27 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+
+// First Step: ask permission to the user to enable notification
+Notification.requestPermission(status => {
+    console.log(status);
+});
+
+// (optional): bind notification to button
+let btn = document.getElementById('notif');
+btn.onclick = () => {
+    if (Notification.permission === "granted") {
+        navigator.serviceWorker.getRegistration().then(reg => {
+            const opts = {
+                body: "A sample notification body.",
+                icon: "icons/manifest-icon-192.png",
+                vibrate: [100, 50, 100],
+                data: {
+                    key: "GREET",
+                    value: "G"
+                }
+            }
+            reg.showNotification("Test notification", opts);
+        });
+    }
+};
