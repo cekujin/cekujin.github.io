@@ -44,3 +44,13 @@ a {
     text-decoration: none;
     color: white;
 }
+
+#notif {
+    padding: 15px;
+    background-color: #03041a;
+    color: white;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+}

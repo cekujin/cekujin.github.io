@@ -13,9 +13,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // First Step: ask permission to the user to enable notification
-Notification.requestPermission(status => {
-    console.log(status);
-});
+Notification.requestPermission(status => {});
 
 // (optional): bind notification to button
 let btn = document.getElementById('notif');
@@ -28,8 +26,13 @@ btn.onclick = () => {
                 vibrate: [100, 50, 100],
                 data: {
                     key: "GREET",
-                    value: "G"
-                }
+                    value: "G",
+                    url: "index.html"
+                },
+                actions: [
+                    { action: "Home", title: "Home page" },
+                    { action: "About", title: "About page" }
+                ]
             }
             reg.showNotification("Test notification", opts);
         });

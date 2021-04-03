@@ -47,7 +47,8 @@ self.addEventListener('fetch', (e) => {
     )
 });
 
+// Handle notification interaction
 self.addEventListener('notificationclose', (e) => {
     let notification = e.notification;
-    let p
+    console.log(notification);
 })
