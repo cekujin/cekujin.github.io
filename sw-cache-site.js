@@ -23,7 +23,7 @@ self.addEventListener('activate', (e) => {
     );
 });
 
-// Call install event
+// Call fetch event
 self.addEventListener('fetch', (e) => {
     console.log('Service Worker: Fetching');
     e.respondWith(
@@ -42,4 +42,25 @@ self.addEventListener('fetch', (e) => {
         })
         .catch(err => caches.match(e.request).then(res => res))
     );
+});
+
+// Handle close notification
+self.addEventListener('notificationclose', (e) => {
+    let notification = e.notification;
+    console.log(notification);
+});
+
+self.addEventListener('notificationclick', e => {
+    let notification = e.notification;
+    let data = notification.data;
+    
+    if (e.action === "clsoe") {
+        notification.close();
+    }
+    else if (e.action === "home") {
+        self.clients.openWindow('home.html');
+    }
+    else if (e.action === "about") {
+        self.clients.openWindow('about.html');
+    }
 });

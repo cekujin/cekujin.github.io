@@ -25,13 +25,11 @@ btn.onclick = () => {
                 icon: "icons/manifest-icon-192.png",
                 vibrate: [100, 50, 100],
                 data: {
-                    key: "GREET",
-                    value: "G",
-                    url: "index.html"
+                    value: 1
                 },
                 actions: [
-                    { action: "Home", title: "Home page" },
-                    { action: "About", title: "About page" }
+                    { action: "home", title: "Home page" },
+                    { action: "about", title: "About page" }
                 ]
             }
             reg.showNotification("Test notification", opts);

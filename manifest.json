@@ -18,7 +18,7 @@
     ],
     "theme_color": "#03041a",
     "background_color": "#03041a",
-    "display": "fullscreen",
+    "display": "standalone",
     "orientation": "portrait",
     "shortcuts": [
         {

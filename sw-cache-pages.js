@@ -40,16 +40,10 @@ self.addEventListener('activate', (e) => {
     );
 });
 
-// Call install event
+// Call fetch event
 self.addEventListener('fetch', (e) => {
     console.log('Service Worker: Fetching');
     e.respondWith(
         fetch(e.request).catch(() => caches.match(e.request))
     )
 });
-
-// Handle notification interaction
-self.addEventListener('notificationclose', (e) => {
-    let notification = e.notification;
-    console.log(notification);
-})
