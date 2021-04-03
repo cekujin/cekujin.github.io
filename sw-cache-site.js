@@ -59,8 +59,10 @@ self.addEventListener('notificationclick', e => {
     }
     else if (e.action === "home") {
         self.clients.openWindow('home.html');
+        notification.close();
     }
     else if (e.action === "about") {
         self.clients.openWindow('about.html');
+        notification.close();
     }
 });
