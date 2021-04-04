@@ -1,5 +1,6 @@
 {
     "name": "Simple PWA",
+    "gcm_sender_id": "252594232397",
     "short_name": "Simple PWA",
     "start_url": "/",
     "icons": [

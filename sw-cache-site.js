@@ -44,25 +44,35 @@ self.addEventListener('fetch', (e) => {
     );
 });
 
-// Handle close notification
+// Handle notification close
 self.addEventListener('notificationclose', (e) => {
     let notification = e.notification;
     console.log(notification);
 });
 
+// Handle notification click
 self.addEventListener('notificationclick', e => {
     let notification = e.notification;
     let data = notification.data;
     
-    if (e.action === "clsoe") {
+    if (e.action === "close") {
         notification.close();
     }
     else if (e.action === "home") {
-        self.clients.openWindow('home.html');
+        self.clients.openWindow('https://cekujin.github.io/');
         notification.close();
     }
     else if (e.action === "about") {
-        self.clients.openWindow('about.html');
+        self.clients.openWindow('https://cekujin.github.io/about.html');
         notification.close();
     }
+    else {
+        self.clients.openWindow('https://cekujin.github.io/');
+        notification.close();
+    }
+});
+
+self.addEventListener('push', e => {
+    const opts = {};
+   e.waitUntil(self.registration.showNotification('Title', opts));
 });

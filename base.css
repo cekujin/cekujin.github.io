@@ -54,3 +54,7 @@ a {
     cursor: pointer;
     border-radius: 5px;
 }
+
+#notif:hover, #notif:focus, #notif:active {
+    color: #0fe43d;
+}
